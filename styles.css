@@ -13,7 +13,8 @@ body {
 
 .right-container {
   flex: 3;
-  flex-direction: row;
+  flex-direction: column;
+  display: flex;
   padding: 20px;
 }
 
@@ -22,18 +23,28 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
 }
+.form-row {
+  display: flex;
+  margin-bottom: 10px;
+}
 
-form {
+.form-row > div {
+  flex: 1;
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
 }
 
-form > div {
-  margin-bottom: 10px;
+.form-row:last-child {
+  margin-bottom: 0;
 }
 
-form > div > label {
-  margin-right: 10px;
+input[type="text"],
+input[type="password"] {
+  width: 50%;
+}
+label {
+  margin-bottom: 5px;
 }
 
 button {
