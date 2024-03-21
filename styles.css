@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   display: flex;
-  font-family: Arial, sans-serif; /* Set a default font */
+  font-family: "Lora", "Cormorant", serif;
 }
 
 .left-container {
@@ -27,6 +29,10 @@ body {
 }
 
 .caption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   position: absolute;
   top: 160px; /* Adjust the distance from the bottom as needed */
   left: 0; /* Position the caption at the left edge */
@@ -34,7 +40,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 20px; /* Increase padding for larger caption */
-  text-align: center; /* Center the caption text horizontally */
+
   font-size: 32px; /* Increase font size for larger caption */
 }
 
@@ -46,19 +52,27 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  background-color: beige;
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.right-container .paragraph {
-  width: 300px;
+.right-container .paragraph,
+.paragraph2 {
+  width: 500px;
   word-wrap: break-word;
+  font-size: 30px;
+}
+
+.paragraph2 {
+  font-style: italic;
 }
 
 form {
+  margin-top: 20px;
   width: 100%; /* Ensure the form takes the full width */
   max-width: 400px; /* Limit form width for better readability */
   position: relative;
@@ -94,4 +108,17 @@ button {
 
 button:hover {
   background-color: green; /* Darken button color on hover */
+}
+
+input {
+  border-width: 3px;
+}
+
+input[type="email"],
+input[type="password"]:invalid {
+  border-color: red;
+}
+input[type="email"],
+input[type="password"]:valid {
+  border-color: green;
 }
